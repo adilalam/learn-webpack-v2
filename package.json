@@ -1,5 +1,5 @@
 {
-  "name": "learn webpack",
+  "name": "learn-webpack",
   "version": "1.0.0",
   "description": "Learning resources for the webpack academy workshop series",
   "main": "index.js",
@@ -8,8 +8,12 @@
     "webpack": "webpack",
     "dev": "npm run webpack-dev-server -- --env.mode development --hot",
     "prod": "npm run webpack -- --env.mode production",
+    "prod:typescript": "npm run prod -- --env.presets typescript",
+    "prod:analyze": "npm run prod -- --env.presets analyze",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
-    "debugthis": "node --inspect --inspect-brk ./src/index.js"
+    "debugthis": "node --inspect --inspect-brk ./src/index.js",
+    "prod:compress": "npm run prod -- --env.presets compress",
+    "dev:compress": "npm run dev -- --env.presets compress"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,7 @@
     "@babel/core": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "babel-loader": "8.0.6",
+    "compression-webpack-plugin": "^6.1.2",
     "css-loader": "3.1.0",
     "file-loader": "^4.1.0",
     "fork-ts-checker-webpack-plugin": "1.5.0",

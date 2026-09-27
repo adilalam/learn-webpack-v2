@@ -4,7 +4,7 @@ const top = document.createElement("div");
 top.innerText = "Top of Footer";
 top.style = red;
 const bottom = document.createElement("div");
-bottom.innerText = "Bottom of Footer";
+bottom.innerText = "Bottom of Footer Now typescript added";
 bottom.style = blue;
 
 const footer = document.createElement("footer");
