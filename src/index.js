@@ -1,4 +1,5 @@
-import { footer } from "./footer";
+// import { footer } from "./footer";
+const getFooter = () => import("./footer");
 import makeButton from "./button";
 import { makeColorStyle } from "./button-styles";
 import makeImage from "./image";
@@ -16,5 +17,11 @@ const image = makeImage(imageUrl);
 const button = makeButton("Yay! A Button! compress with source map");
 button.style = makeColorStyle("white");
 document.body.appendChild(button);
-document.body.appendChild(footer);
+
+button.addEventListener('click', (e)=>{
+  getFooter().then((footerModule)=> {
+    document.body.appendChild(footerModule.footer);
+  });
+})
+
 document.body.appendChild(image);
