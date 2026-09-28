@@ -1,3 +1,4 @@
+// const getGsap = () => import('gsap')
 // import { footer } from "./footer";
 const getFooter = () => import("./footer");
 import makeButton from "./button";
